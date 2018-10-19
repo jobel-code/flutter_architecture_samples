@@ -13,7 +13,7 @@ import 'package:todos_repository_flutter/todos_repository_flutter.dart';
 List<Middleware<AppState>> createStoreTodosMiddleware([
   TodosRepository repository = const TodosRepositoryFlutter(
     fileStorage: const FileStorage(
-      'redux_sample_app_',
+      '__redux_app__',
       getApplicationDocumentsDirectory,
     ),
   ),
@@ -21,15 +21,15 @@ List<Middleware<AppState>> createStoreTodosMiddleware([
   final saveTodos = _createSaveTodos(repository);
   final loadTodos = _createLoadTodos(repository);
 
-  return combineTypedMiddleware([
-    new MiddlewareBinding<AppState, LoadTodosAction>(loadTodos),
-    new MiddlewareBinding<AppState, AddTodoAction>(saveTodos),
-    new MiddlewareBinding<AppState, ClearCompletedAction>(saveTodos),
-    new MiddlewareBinding<AppState, ToggleAllAction>(saveTodos),
-    new MiddlewareBinding<AppState, UpdateTodoAction>(saveTodos),
-    new MiddlewareBinding<AppState, TodosLoadedAction>(saveTodos),
-    new MiddlewareBinding<AppState, DeleteTodoAction>(saveTodos),
-  ]);
+  return [
+    TypedMiddleware<AppState, LoadTodosAction>(loadTodos),
+    TypedMiddleware<AppState, AddTodoAction>(saveTodos),
+    TypedMiddleware<AppState, ClearCompletedAction>(saveTodos),
+    TypedMiddleware<AppState, ToggleAllAction>(saveTodos),
+    TypedMiddleware<AppState, UpdateTodoAction>(saveTodos),
+    TypedMiddleware<AppState, TodosLoadedAction>(saveTodos),
+    TypedMiddleware<AppState, DeleteTodoAction>(saveTodos),
+  ];
 }
 
 Middleware<AppState> _createSaveTodos(TodosRepository repository) {
@@ -47,12 +47,12 @@ Middleware<AppState> _createLoadTodos(TodosRepository repository) {
     repository.loadTodos().then(
       (todos) {
         store.dispatch(
-          new TodosLoadedAction(
+          TodosLoadedAction(
             todos.map(Todo.fromEntity).toList(),
           ),
         );
       },
-    ).catchError((_) => store.dispatch(new TodosNotLoadedAction()));
+    ).catchError((_) => store.dispatch(TodosNotLoadedAction()));
 
     next(action);
   };

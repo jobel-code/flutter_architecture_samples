@@ -43,7 +43,7 @@ main() {
       expect(await detailsScreen.task, isNotEmpty);
       expect(await detailsScreen.note, isNotEmpty);
 
-      final editScreen = await detailsScreen.tapEditTodoButton();
+      final editScreen = detailsScreen.tapEditTodoButton();
 
       expect(await editScreen.isReady(), isTrue);
 
@@ -97,7 +97,7 @@ main() {
 
       // This is a hacky way to check if the tapping the checkbox was
       // successful. Would be better to have an `isChecked` method from the
-      // driver.
+      // driver or perhaps need to write a custom Matcher.
       expect(await stats.numActive, 1);
       expect(await stats.numCompleted, 3);
     });

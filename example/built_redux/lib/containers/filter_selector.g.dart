@@ -1,7 +1,3 @@
-// Copyright 2018 The Flutter Architecture Sample Authors. All rights reserved. 
-// Use of this source code is governed by the MIT license that can be found 
-// in the LICENSE file.
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of filter_selector;
@@ -75,16 +71,12 @@ class FilterSelectorViewModelBuilder
   _$FilterSelectorViewModel _$v;
 
   OnFilterSelected _onFilterSelected;
-
   OnFilterSelected get onFilterSelected => _$this._onFilterSelected;
-
   set onFilterSelected(OnFilterSelected onFilterSelected) =>
       _$this._onFilterSelected = onFilterSelected;
 
   VisibilityFilter _activeFilter;
-
   VisibilityFilter get activeFilter => _$this._activeFilter;
-
   set activeFilter(VisibilityFilter activeFilter) =>
       _$this._activeFilter = activeFilter;
 

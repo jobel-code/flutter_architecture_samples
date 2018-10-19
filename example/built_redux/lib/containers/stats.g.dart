@@ -1,7 +1,3 @@
-// Copyright 2018 The Flutter Architecture Sample Authors. All rights reserved. 
-// Use of this source code is governed by the MIT license that can be found 
-// in the LICENSE file.
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of stats;
@@ -66,15 +62,11 @@ class StatsPropsBuilder implements Builder<StatsProps, StatsPropsBuilder> {
   _$StatsProps _$v;
 
   int _numCompleted;
-
   int get numCompleted => _$this._numCompleted;
-
   set numCompleted(int numCompleted) => _$this._numCompleted = numCompleted;
 
   int _numActive;
-
   int get numActive => _$this._numActive;
-
   set numActive(int numActive) => _$this._numActive = numActive;
 
   StatsPropsBuilder();

@@ -1,7 +1,3 @@
-// Copyright 2018 The Flutter Architecture Sample Authors. All rights reserved. 
-// Use of this source code is governed by the MIT license that can be found 
-// in the LICENSE file.
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of todo;
@@ -138,27 +134,19 @@ class TodoBuilder implements Builder<Todo, TodoBuilder> {
   _$Todo _$v;
 
   bool _complete;
-
   bool get complete => _$this._complete;
-
   set complete(bool complete) => _$this._complete = complete;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _note;
-
   String get note => _$this._note;
-
   set note(String note) => _$this._note = note;
 
   String _task;
-
   String get task => _$this._task;
-
   set task(String task) => _$this._task = task;
 
   TodoBuilder();

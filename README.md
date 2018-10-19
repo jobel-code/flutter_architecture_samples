@@ -1,5 +1,8 @@
 # flutter_architecture_samples
 
+[![Build Status](https://travis-ci.org/brianegan/flutter_architecture_samples.svg?branch=master)](https://travis-ci.org/brianegan/flutter_architecture_samples)
+[![codecov](https://codecov.io/gh/brianegan/flutter_architecture_samples/branch/master/graph/badge.svg)](https://codecov.io/gh/brianegan/flutter_architecture_samples)
+
 <img align="right" src="assets/todo-list.png" alt="List of Todos Screen">
 
 [TodoMVC](http://todomvc.com) for Flutter!
@@ -12,7 +15,7 @@ You can use the samples in this project as a learning reference, or as a startin
 
 ### Current Samples
 
-To run the samples, please use the `beta` channel and Dart 1 for now. We'll update to Dart 2 soon!
+Examples have been updated to Dart 2.
 
   * [Lifting State Up (Vanilla) Example](example/vanilla) - Uses the tools Flutter provides out of the box to manage app state.
   * [InheritedWidget Example](example/inherited_widget) - Uses an InheritedWidget to pass app state down the widget hierarchy.
@@ -21,6 +24,8 @@ To run the samples, please use the `beta` channel and Dart 1 for now. We'll upda
   * [scoped_model Example](example/scoped_model) - Uses the [scoped_model](https://pub.dartlang.org/packages/scoped_model) library to hold app state and notify Widgets of Updates
   * [Firestore Redux Example](example/firestore_redux) - Uses the [Redux](https://pub.dartlang.org/packages/redux) library to manage app state and update Widgets and 
   adds [Cloud_Firestore](https://firebase.google.com/docs/firestore/) as the Todos database.
+  * [MVU Example](example/mvu) - Uses the [dartea](https://pub.dartlang.org/packages/dartea) library to manage app state and update Widgets.
+  * [ReduRx Example](example/redurx) - Uses the [redurx](https://pub.dartlang.org/packages/redurx) + [flutter_redurx](https://pub.dartlang.org/packages/flutter_redurx) libraries as a new way to handle state using RxDart and StreamBuilder based on a Redux store.
 
 ### Supporting Code
 
@@ -59,5 +64,8 @@ All of these ideas and even some of the language are directly influenced by two 
   * [Pascal Welsch](https://github.com/passsy)
   * [Larry King](https://github.com/kinggolf)
   * [Frank Harper](https://github.com/franklinharper)
+  * [Pavel Shilyagov](https://github.com/p69)
+  * [Maurice McCabe](https://github.com/mmcc007)
+  * [Leo Cavalcante](https://github.com/leocavalcante)
 
 I'd like to thank all of the folks who have helped write new samples, improve the current implementations, and added documentation! You're amazing! :)

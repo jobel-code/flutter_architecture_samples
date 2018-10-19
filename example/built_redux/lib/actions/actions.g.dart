@@ -1,10 +1,74 @@
-// Copyright 2018 The Flutter Architecture Sample Authors. All rights reserved. 
-// Use of this source code is governed by the MIT license that can be found 
-// in the LICENSE file.
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of actions;
+
+// **************************************************************************
+// Generator: BuiltReduxGenerator
+// **************************************************************************
+
+class _$AppActions extends AppActions {
+  factory _$AppActions() => new _$AppActions._();
+  _$AppActions._() : super._();
+
+  final ActionDispatcher<Todo> addTodoAction =
+      new ActionDispatcher<Todo>('AppActions-addTodoAction');
+  final ActionDispatcher<Null> clearCompletedAction =
+      new ActionDispatcher<Null>('AppActions-clearCompletedAction');
+  final ActionDispatcher<String> deleteTodoAction =
+      new ActionDispatcher<String>('AppActions-deleteTodoAction');
+  final ActionDispatcher<Null> fetchTodosAction =
+      new ActionDispatcher<Null>('AppActions-fetchTodosAction');
+  final ActionDispatcher<Null> toggleAllAction =
+      new ActionDispatcher<Null>('AppActions-toggleAllAction');
+  final ActionDispatcher<List<Todo>> loadTodosSuccess =
+      new ActionDispatcher<List<Todo>>('AppActions-loadTodosSuccess');
+  final ActionDispatcher<Object> loadTodosFailure =
+      new ActionDispatcher<Object>('AppActions-loadTodosFailure');
+  final ActionDispatcher<VisibilityFilter> updateFilterAction =
+      new ActionDispatcher<VisibilityFilter>('AppActions-updateFilterAction');
+  final ActionDispatcher<AppTab> updateTabAction =
+      new ActionDispatcher<AppTab>('AppActions-updateTabAction');
+  final ActionDispatcher<UpdateTodoActionPayload> updateTodoAction =
+      new ActionDispatcher<UpdateTodoActionPayload>(
+          'AppActions-updateTodoAction');
+
+  @override
+  void setDispatcher(Dispatcher dispatcher) {
+    addTodoAction.setDispatcher(dispatcher);
+    clearCompletedAction.setDispatcher(dispatcher);
+    deleteTodoAction.setDispatcher(dispatcher);
+    fetchTodosAction.setDispatcher(dispatcher);
+    toggleAllAction.setDispatcher(dispatcher);
+    loadTodosSuccess.setDispatcher(dispatcher);
+    loadTodosFailure.setDispatcher(dispatcher);
+    updateFilterAction.setDispatcher(dispatcher);
+    updateTabAction.setDispatcher(dispatcher);
+    updateTodoAction.setDispatcher(dispatcher);
+  }
+}
+
+class AppActionsNames {
+  static final ActionName<Todo> addTodoAction =
+      new ActionName<Todo>('AppActions-addTodoAction');
+  static final ActionName<Null> clearCompletedAction =
+      new ActionName<Null>('AppActions-clearCompletedAction');
+  static final ActionName<String> deleteTodoAction =
+      new ActionName<String>('AppActions-deleteTodoAction');
+  static final ActionName<Null> fetchTodosAction =
+      new ActionName<Null>('AppActions-fetchTodosAction');
+  static final ActionName<Null> toggleAllAction =
+      new ActionName<Null>('AppActions-toggleAllAction');
+  static final ActionName<List<Todo>> loadTodosSuccess =
+      new ActionName<List<Todo>>('AppActions-loadTodosSuccess');
+  static final ActionName<Object> loadTodosFailure =
+      new ActionName<Object>('AppActions-loadTodosFailure');
+  static final ActionName<VisibilityFilter> updateFilterAction =
+      new ActionName<VisibilityFilter>('AppActions-updateFilterAction');
+  static final ActionName<AppTab> updateTabAction =
+      new ActionName<AppTab>('AppActions-updateTabAction');
+  static final ActionName<UpdateTodoActionPayload> updateTodoAction =
+      new ActionName<UpdateTodoActionPayload>('AppActions-updateTodoAction');
+}
 
 // **************************************************************************
 // Generator: BuiltValueGenerator
@@ -126,15 +190,11 @@ class UpdateTodoActionPayloadBuilder
   _$UpdateTodoActionPayload _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   TodoBuilder _updatedTodo;
-
   TodoBuilder get updatedTodo => _$this._updatedTodo ??= new TodoBuilder();
-
   set updatedTodo(TodoBuilder updatedTodo) => _$this._updatedTodo = updatedTodo;
 
   UpdateTodoActionPayloadBuilder();
@@ -180,73 +240,4 @@ class UpdateTodoActionPayloadBuilder
     replace(_$result);
     return _$result;
   }
-}
-
-// **************************************************************************
-// Generator: BuiltReduxGenerator
-// **************************************************************************
-
-class _$AppActions extends AppActions {
-  factory _$AppActions() => new _$AppActions._();
-
-  _$AppActions._() : super._();
-
-  final ActionDispatcher<Todo> addTodoAction =
-      new ActionDispatcher<Todo>('AppActions-addTodoAction');
-  final ActionDispatcher<Null> clearCompletedAction =
-      new ActionDispatcher<Null>('AppActions-clearCompletedAction');
-  final ActionDispatcher<String> deleteTodoAction =
-      new ActionDispatcher<String>('AppActions-deleteTodoAction');
-  final ActionDispatcher<Null> fetchTodosAction =
-      new ActionDispatcher<Null>('AppActions-fetchTodosAction');
-  final ActionDispatcher<Null> toggleAllAction =
-      new ActionDispatcher<Null>('AppActions-toggleAllAction');
-  final ActionDispatcher<List<Todo>> loadTodosSuccess =
-      new ActionDispatcher<List<Todo>>('AppActions-loadTodosSuccess');
-  final ActionDispatcher<Object> loadTodosFailure =
-      new ActionDispatcher<Object>('AppActions-loadTodosFailure');
-  final ActionDispatcher<VisibilityFilter> updateFilterAction =
-      new ActionDispatcher<VisibilityFilter>('AppActions-updateFilterAction');
-  final ActionDispatcher<AppTab> updateTabAction =
-      new ActionDispatcher<AppTab>('AppActions-updateTabAction');
-  final ActionDispatcher<UpdateTodoActionPayload> updateTodoAction =
-      new ActionDispatcher<UpdateTodoActionPayload>(
-          'AppActions-updateTodoAction');
-
-  @override
-  void setDispatcher(Dispatcher dispatcher) {
-    addTodoAction.setDispatcher(dispatcher);
-    clearCompletedAction.setDispatcher(dispatcher);
-    deleteTodoAction.setDispatcher(dispatcher);
-    fetchTodosAction.setDispatcher(dispatcher);
-    toggleAllAction.setDispatcher(dispatcher);
-    loadTodosSuccess.setDispatcher(dispatcher);
-    loadTodosFailure.setDispatcher(dispatcher);
-    updateFilterAction.setDispatcher(dispatcher);
-    updateTabAction.setDispatcher(dispatcher);
-    updateTodoAction.setDispatcher(dispatcher);
-  }
-}
-
-class AppActionsNames {
-  static final ActionName<Todo> addTodoAction =
-      new ActionName<Todo>('AppActions-addTodoAction');
-  static final ActionName<Null> clearCompletedAction =
-      new ActionName<Null>('AppActions-clearCompletedAction');
-  static final ActionName<String> deleteTodoAction =
-      new ActionName<String>('AppActions-deleteTodoAction');
-  static final ActionName<Null> fetchTodosAction =
-      new ActionName<Null>('AppActions-fetchTodosAction');
-  static final ActionName<Null> toggleAllAction =
-      new ActionName<Null>('AppActions-toggleAllAction');
-  static final ActionName<List<Todo>> loadTodosSuccess =
-      new ActionName<List<Todo>>('AppActions-loadTodosSuccess');
-  static final ActionName<Object> loadTodosFailure =
-      new ActionName<Object>('AppActions-loadTodosFailure');
-  static final ActionName<VisibilityFilter> updateFilterAction =
-      new ActionName<VisibilityFilter>('AppActions-updateFilterAction');
-  static final ActionName<AppTab> updateTabAction =
-      new ActionName<AppTab>('AppActions-updateTabAction');
-  static final ActionName<UpdateTodoActionPayload> updateTodoAction =
-      new ActionName<UpdateTodoActionPayload>('AppActions-updateTodoAction');
 }
